@@ -1,5 +1,6 @@
 body {
     margin: 0 auto;
+    min-height: 100vh;
 }
 
 .container {
@@ -7,7 +8,7 @@ body {
     width: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, clamp(200px, 50%, 1fr));
-    grid-template-rows: minmax(200px, auto) minmax(200px, 800px);
+    grid-template-rows:  repeat(2, minmax(200px, auto));
 }
 
 .header {
@@ -164,26 +165,38 @@ body {
     grid-row: 2 / 3;
     padding: 0 1.1em 0 2em;
     margin: 0 3em 0 0;
-    border: 1px solid;
-    background-color: red;
+    padding-bottom: 3em;
 }
 
-.grid-container {
+.grid-containers {
     display: grid;
-    grid-template-columns: repeat(2, minmax(150px, 400px));
+    grid-template-columns: repeat(2, minmax(250px, 500px));
     grid-template-rows: repeat(3, 250px);
     gap: 2em;
 }
 
-.grid-container1,
-.grid-container2,
-.grid-container3,
-.grid-container4,
-.grid-container5,
-.grid-container6 {
+.grid-container {
     background-color: white;
     padding: 0 0.9em;
     border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+
+.grid-container > p {
+    padding: 0;
+}
+
+.image {
+    height: 60px;
+    justify-self: end;
+    align-self: end;
+}
+
+.image > img {
+    padding-right: 1.5em;
 }
 
 .announcements {
@@ -199,6 +212,38 @@ body {
 
 .right-container {
     background-color: white;
-
+    padding: 0 1.5em 1.5em 1.5em;
 }
 
+.right-container > p {
+    padding: 0;
+}
+
+.trending > .trending-container img {
+    height: 60px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.trending-container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(1, 50px) repeat(auto-fit, minmax(70px, 200px));
+    grid-template-rows: repeat(4, 1fr);
+    align-content: center;
+    gap: 0.7em;
+    padding: 1.5em;
+}
+
+.trending-container > .head-para {
+   margin: 0 auto;
+}
+
+.trending-container > .head-para > h4, p {
+    margin: 0;
+    padding-left: 0.5em;
+}
+
+.trending-container > .head-para > h4 {
+    margin-bottom: 0.4em;
+}
