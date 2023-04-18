@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Ubuntu:wght@300&display=swap');
+
 body {
-    margin: 0 auto;
+    margin: 0;
     min-height: 100vh;
+    background-color: #f3f4f6;
+    font-family: 'Playfair Display', sans-serif;
+    letter-spacing: .1em;
 }
 
 .container {
     background-color: #f3f4f6;
-    width: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, clamp(200px, 50%, 1fr));
     grid-template-rows:  repeat(2, minmax(200px, auto));
@@ -30,6 +34,7 @@ body {
 .search-container img {
     height: 25px;
     padding: 0 1em 0 0;
+    cursor: pointer;
 }
 
 .search-container input {
@@ -37,6 +42,7 @@ body {
     max-width: 85%;
     height: 1.5em;
     border: none;
+    padding: 0.3em;
     border-radius: 20px;
     background-color: #f3f4f6;
 }
@@ -45,24 +51,27 @@ body {
     grid-column: 3 / 4;
     padding-top: 1em;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-start;
-    gap: 20px;
+    gap: 5em;
 }
 
 .notification img:first-of-type {
+    cursor: pointer;
     height: 25px;
     margin-top: 13px;
     align-self: start;
 }
 
 .notification img:last-of-type {
+    cursor: pointer;
     height: 50px;
     align-self: start;
 }
 
 .notification h4 {
     margin: 17px 0 0 0;
+    cursor: pointer;
 }
 
 .greeting {
@@ -75,6 +84,7 @@ body {
 .profile-picture img {
     height: 70px;
     padding-right: 1.7em;
+    cursor: default;
 }
 
 .buttons {
@@ -182,11 +192,16 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr 1fr;
+    border-left: 8px solid #eab308;
 }
 
 
 .grid-container > p {
     padding: 0;
+}
+
+.grid-containers > .focus:hover {
+    background-color: whitesmoke;
 }
 
 .image {
@@ -201,6 +216,9 @@ body {
 
 .announcements {
     grid-column: 5 / 6;
+    margin-left: -3em;
+    margin-right: 1em;
+    margin-bottom: 1em;
 }
 
 .announcements > .maintenance-container {
@@ -212,11 +230,16 @@ body {
 
 .right-container {
     background-color: white;
-    padding: 0 1.5em 1.5em 1.5em;
+    padding: 0 1.5em 0.3em 1.5em;
 }
 
 .right-container > p {
-    padding: 0;
+    border-bottom: 1px solid #999;
+    padding: 0 0 1em 0;
+}
+
+.right-container > p:last-of-type {
+    border: none;
 }
 
 .trending > .trending-container img {
@@ -236,7 +259,8 @@ body {
 }
 
 .trending-container > .head-para {
-   margin: 0 auto;
+   margin: 0;
+   padding-top: 3px;
 }
 
 .trending-container > .head-para > h4, p {
